@@ -1,5 +1,3 @@
-DEVICE = fe310g002
-
 OBJCOPY = llvm-objcopy
 OBJDUMP = llvm-objdump
 CC = clang --target=riscv32 -march=rv32imac -mabi=ilp32
