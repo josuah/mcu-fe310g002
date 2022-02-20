@@ -43,7 +43,7 @@ struct zmcu_pwm {
 	uint32_t volatile PWMS;
 
 	/* 0x14 */
-	uint32_t volatile RESERVED2[(0x20-0x14)/4];
+	uint8_t volatile RESERVED2[0x20-0x14];
 
 	/* 0x20: PWM compare register */
 	uint32_t volatile PWMCMP[4];

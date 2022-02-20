@@ -16,7 +16,7 @@ struct zmcu_spi {
 #define SPI_SCKMODE_POL				(1u << 1)
 
 	/* 0x08 */
-	uint32_t volatile RESERVED0[(0x10-0x08)/4];
+	uint8_t volatile RESERVED0[0x10-0x08];
 
 	/* 0x10: Chip select ID */
 	uint32_t volatile CSID;
@@ -28,7 +28,7 @@ struct zmcu_spi {
 	uint32_t volatile CSMODE;
 
 	/* 0x1C */
-	uint32_t volatile RESERVED1[(0x28-0x1C)/4];
+	uint8_t volatile RESERVED1[0x28-0x1C];
 
 	/* 0x28: Delay control */
 	uint32_t volatile DELAY[2];
@@ -38,7 +38,7 @@ struct zmcu_spi {
 #define SPI_DELAY1_INTERXFR(x)			((x) << 16)
 
 	/* 0x30 */
-	uint32_t volatile RESERVED2[(0x40-0x30)/4];
+	uint8_t volatile RESERVED2[0x40-0x30];
 
 	/* 0x40: Frame format */
 	uint32_t volatile FMT;
@@ -63,7 +63,7 @@ struct zmcu_spi {
 	uint32_t volatile RXMARK;
 
 	/* 0x58 */
-	uint32_t volatile RESERVED4[(0x60-0x58)/4];
+	uint8_t volatile RESERVED4[0x60-0x58];
 
 	/* 0x60: SPI flash interface control* */
 	uint32_t volatile FCTRL;
@@ -81,7 +81,7 @@ struct zmcu_spi {
 #define SPI_FFMT_PAD_CODE(x)			((x) << 24)
 
 	/* 0x68 */
-	uint32_t volatile RESERVED5[(0x70-0x68)/4];
+	uint8_t volatile RESERVED5[0x70-0x68];
 
 	/* 0x70: SPI interrupt enable */
 	uint32_t volatile IE;
