@@ -30,14 +30,14 @@ struct zmcu_pwm {
 #define PWM_PWMCFG_PWMCMP3IP			(1u << 31)
 
 	/* 0x04 */
-	uint32_t volatile RESERVED0;
+	uint8_t volatile RESERVED0[0x08-0x04];
 
 	/* 0x08: PWM count register */
 	uint32_t volatile PWMCOUNT;
 #define PWM_PWMCOUNT_PWMCOUNT(x)		((x) << 0)
 
 	/* 0x0C */
-	uint32_t volatile RESERVED1;
+	uint8_t volatile RESERVED1[0x10-0x0C];
 
 	/* 0x10: Scaled PWM count register */
 	uint32_t volatile PWMS;

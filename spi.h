@@ -44,7 +44,7 @@ struct zmcu_spi {
 	uint32_t volatile FMT;
 
 	/* 0x44 */
-	uint32_t volatile RESERVED3;
+	uint8_t volatile RESERVED3[0x48-0x44];
 
 	/* 0x48: Tx FIFO Data */
 	uint32_t volatile TXDATA;
