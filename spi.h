@@ -2,10 +2,10 @@
 #include <stdint.h>
 #include <binary.h>
 
-#define SPI1 ((struct zmcu_spi *)0x10024000)
-#define SPI2 ((struct zmcu_spi *)0x10034000)
+#define SPI1 ((struct sdk_spi *)0x10024000)
+#define SPI2 ((struct sdk_spi *)0x10034000)
 
-struct zmcu_spi {
+struct sdk_spi {
 
 	/* 0x00: Serial clock divisor */
 	uint32_t volatile SCKDIV;

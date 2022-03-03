@@ -2,9 +2,9 @@
 #include <stdint.h>
 #include <binary.h>
 
-#define I2C0 ((struct zmcu_i2c *)0x10016000)
+#define I2C0 ((struct sdk_i2c *)0x10016000)
 
-struct zmcu_i2c {
+struct sdk_i2c {
 
 	/* 0x00: Clock Prescale register */
 	uint16_t volatile PRER;

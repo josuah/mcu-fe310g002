@@ -2,10 +2,10 @@
 #include <stdint.h>
 #include <binary.h>
 
-#define UART0 ((struct zmcu_uart *)0x10013000)
-#define UART1 ((struct zmcu_uart *)0x10023000)
+#define UART0 ((struct sdk_uart *)0x10013000)
+#define UART1 ((struct sdk_uart *)0x10023000)
 
-struct zmcu_uart {
+struct sdk_uart {
 
 	/* 0x00: Transmit data register */
 	uint32_t volatile TXDATA;

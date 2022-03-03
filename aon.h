@@ -2,9 +2,9 @@
 #include <stdint.h>
 #include <binary.h>
 
-#define AON ((struct zmcu_aon *)0x10000000)
+#define AON ((struct sdk_aon *)0x10000000)
 
-struct zmcu_aon {
+struct sdk_aon {
 
 	/* 0x000: wdog Configuration */
 	uint32_t volatile WDOGCFG;

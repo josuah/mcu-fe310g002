@@ -2,9 +2,9 @@
 #include <stdint.h>
 #include <binary.h>
 
-#define GPIO ((struct zmcu_gpio *)0x10012000)
+#define GPIO ((struct sdk_gpio *)0x10012000)
 
-struct zmcu_gpio {
+struct sdk_gpio {
 
 	/* 0x00: Pin value */
 	uint32_t volatile INPUT_VAL;

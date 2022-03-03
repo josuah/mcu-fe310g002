@@ -2,9 +2,9 @@
 #include <stdint.h>
 #include <binary.h>
 
-#define OTP ((struct zmcu_otp *)0x10010000)
+#define OTP ((struct sdk_otp *)0x10010000)
 
-struct zmcu_otp {
+struct sdk_otp {
 
 	/* 0x00: Programmed-I/O lock register */
 	uint32_t volatile LOCK;

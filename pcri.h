@@ -2,9 +2,9 @@
 #include <stdint.h>
 #include <binary.h>
 
-#define PRCI ((struct zmcu_pcri *)0x10008000)
+#define PRCI ((struct sdk_pcri *)0x10008000)
 
-struct zmcu_pcri {
+struct sdk_pcri {
 
 	/* 0x00: Ring Oscillator Configuration and Status */
 	uint32_t volatile HFROSCCFG;

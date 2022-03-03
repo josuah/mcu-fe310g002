@@ -2,11 +2,11 @@
 #include <stdint.h>
 #include <binary.h>
 
-#define PWM0 ((struct zmcu_pwm *)0x10015000)
-#define PWM1 ((struct zmcu_pwm *)0x10025000)
-#define PWM2 ((struct zmcu_pwm *)0x10035000)
+#define PWM0 ((struct sdk_pwm *)0x10015000)
+#define PWM1 ((struct sdk_pwm *)0x10025000)
+#define PWM2 ((struct sdk_pwm *)0x10035000)
 
-struct zmcu_pwm {
+struct sdk_pwm {
 
 	/* 0x00: PWM configuration register */
 	uint32_t volatile PWMCFG;
